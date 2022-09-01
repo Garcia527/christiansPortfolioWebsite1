@@ -1,0 +1,384 @@
+    @charset "utf-8";
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+    body {
+        background-color: #f6f5f5;
+    } 
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+/* Nav Bar */
+    .navbar {
+        width: 100%;
+        height: 130px;
+        background-color: #FFFFFF;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        padding: 0px 5%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+
+    }
+
+    nav ul li a {
+        margin: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #505050;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    /* .active {
+        font-weight: bold;
+        color: #000000;
+        text-decoration: underline;
+    }  */
+
+    .menu-btn {
+        color: #000000;
+        font-size: 23px;
+        cursor: pointer;
+        display: none;
+    }
+
+    @media (max-width: 947px) {
+
+        .menu-btn {
+            display: block;
+            z-index: 999;
+
+        }
+
+        .max-width {
+            padding: 0 50px;
+        }
+
+        .menu-btn i.active:before {
+            content: "\f00d";
+        }
+
+        .navbar .menu {
+            position: fixed;
+            height: 30vh;
+            width: 100%;
+            left: -100%;
+            top: 120px;
+            background: #000000;
+            text-align: center;
+            /* padding-top: 150px; */
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .navbar .menu li{
+            padding: 15px;
+        }
+
+        .navbar .menu li a {
+            /* display: block; */
+            /* margin: 20px 0; */
+            font-size: 25px;
+            color: #FFFFFF;
+            padding: 10px;
+        }
+
+        .navbar .menu.active {
+            left: 0;
+        }
+
+        .text-container {
+            margin: auto;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+        .text-container button{
+            background-color: #000000;
+        }
+
+        /* footer {
+            position: absolute;
+            bottom: 10px;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+        } */
+    }
+
+/* Logo */
+    .logo {
+        height: 90px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* .active {
+        font-weight: bold;
+        color: #000000;
+        text-decoration: underline;
+    } */
+
+
+    .text-container p{
+        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #403e3e;
+        font-size: 25px;
+        line-height: 5px;
+    }
+
+    .model {
+        max-width: 65%;
+        max-height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;           
+    }
+
+/* Text Container */
+    .text-container {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -110%);
+    }
+
+    .text-container button {
+        padding: 5px;
+        border-radius: 10px;
+        margin: 0 20px 0 20px;
+    }
+
+    .hire-btn {
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+
+    .hire-btn a {
+        color: #FFFFFF;
+    } 
+
+    .myWork-btn {
+        border: 2px solid #FFFFFF;
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+
+    .myWork-btn a {
+        color: #FFFFFF;
+    }
+    
+     button:active {
+         transform: scale(1.1);
+    }
+
+/* About page, images */
+    .images {
+        padding: 4% 2% 2% 2%;
+    }
+
+    .box-1, .box-2, .box-3, .box-4, .box-5 {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .box-container {
+        display: flex; 
+        justify-content:space-between;
+    }
+
+    .box-1 img, .box-2 img, .box-3 img, .box-4 img, .box-5 img{
+        box-shadow: 6px 10px 12px rgba(0, 0, 0, 0.3);
+        max-width:95%;
+        max-height:95%;
+        border-radius: 5px;
+    }
+
+ /* About page, about me container */
+
+    .about-container { 
+        width: 75%;
+        height: 100%;
+        /* background-color: #FFFFFF; */
+        border-radius: 5px;
+        display: flex;
+        margin: 30px auto 30px auto;
+        /* position: relative; */
+        justify-content: space-evenly;
+        align-items: center;
+        /* box-shadow: 6px 10px 12px rgba(0, 0, 0, 0.3); */
+
+    }
+
+    .about-text p{
+        text-align: center;
+        color: #403e3e;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
+        padding: 5px;
+        /* margin-left: 10%;
+        margin-right: 10%; */
+        /* line-height: 0px; */
+    }
+
+/* Gallery */
+
+    .gallery-container img {
+        height: 100%;
+        width: 100%;
+        padding: 0 20% 0 20%;
+    }
+
+    figure figcaption {
+        padding: 0 20% 0 20%;
+    }
+     
+    .row {
+        display: flex;
+      }
+      
+    .column {
+        flex: 50%;
+      }
+
+    figure {
+        padding: 15px;
+    }
+
+/* Pricing & Contact */
+    .pc-container {
+        /* width: 80%;
+        height: 300px; */
+
+        width: auto;
+        height: auto;
+
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+        display: flex;
+        margin: 4%;   
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .pc-text p, .pc-text a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pc-text {
+        padding: 15px;
+    }
+
+    .pc-text p:nth-child(1) {
+        /* color: #403e3e; */
+        color: #000000;
+        font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .pc-text p:nth-child(8) {
+        color: red;
+    }
+
+    .pc-container .column form .fields {
+        display: flex;
+    }
+
+    .pc-container .column form .fields .field,
+    .pc-container .column form .field  {
+        height: 45px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .column {
+        padding: 5px;
+    }
+
+    .pc-container .column form .textarea {
+        height: 80px;
+        width: 100%;
+    }
+
+    .pc-container .column form .name {
+        margin-right: 10px;
+    }
+    
+    .pc-container .column form .email {
+        margin-left: 10px;
+    }
+
+    .pc-container .column form .field input, 
+    .pc-container .column form .textarea textarea {
+        height: 100%;
+        width: 100%;
+        border: 1px solid lightgray;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+    }
+
+    .pc-container .column form .textarea textarea{
+        padding-top: 10px;
+        resize: none;
+    }
+
+    .pc-container .column form .button {
+        height: 47px;
+        width: 170px;
+    }
+
+    .pc-container .column form .button button {
+        height: 100%;
+        width: 100%;
+        border: 2px solid crimson;
+        background: crimson;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .pc-container .column form .button button:hover {
+        color: crimson;
+        background: none;
+    }
+
+/* Footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    footer p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #7e7d7d;
+        text-align: center;
+    }
